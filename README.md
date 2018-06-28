@@ -181,3 +181,32 @@ jQuery.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=montre
 code repeatedly to get a new ISS position, then update the `src` of the image based on that.
 * **NOTE**: Make sure you get an API key, because you'll be calling the Google Maps API quite often!
 * **NOTE**: To limit the calls you make to the Google Maps API, don't use setInterval from the start. First make sure that your code is working well by calling your function only once. When you feel that your code is working, activate the `setInterval` and set it to a low value to admire your hard work :)
+
+
+
+## Exercise 4: playing with forms
+* Add the following code to your HTML page:
+```html
+<form id="signup-form">
+    <div><input type="text" name="user" placeholder="Username"></div>
+    <div><input type="password" name="password" placeholder="Password"></div>
+    <div><input type="password" name="password2" placeholder="Confirm Password"></div>
+    <div><button type="submit">Signup!</button></div>
+</form>
+```
+* Click the Signup button and notice that the browser tries to submit the form by reloading the page
+* For this exercise, we want to do some basic checking before submitting the form
+* Add an onSubmit event handler to the form using the following code:
+```javascript
+$('#signup-form').on('submit', function(event) {
+	// write your code here
+});
+```
+* Inside the event handler, you get passed the actual event object as a parameter, that we decided to call `event`
+* Call `event.preventDefault()` inside your handler, reload your page, and check that clicking Signup will not submit the form
+* Using [`jQuery.fn.val`](http://api.jquery.com/val/), find out the values of the password and confirm password fields of the form
+* Make the following validation on the fields:
+  1. The password should be at least 10 characters
+  2. The password and confirm password should be the same
+* If the validation passes, then let the form submit normally by NOT calling `preventDefault`.
+* If the validation fails, prevent the form from submitting and display an `alert` to the user telling them what went wrong
