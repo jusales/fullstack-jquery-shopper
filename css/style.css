@@ -5,6 +5,16 @@
 }
 
 button {
+    content: "X";
+    width: fit-content;
     border: 0px;
     position: absolute;
+}
+
+.clicked {
+    content: "Show announcement";
+}
+
+.hidden {
+    display: none;
 }
