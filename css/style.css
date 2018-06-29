@@ -1,0 +1,10 @@
+.announcement {
+    border: 16px;
+    background: rgb(230, 173, 211);
+    padding: 20px;
+}
+
+button {
+    border: 0px;
+    position: absolute;
+}
