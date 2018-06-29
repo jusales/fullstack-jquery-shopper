@@ -11,10 +11,6 @@ button {
     position: absolute;
 }
 
-.clicked {
-    content: "Show announcement";
-}
-
 .hidden {
     display: none;
 }
